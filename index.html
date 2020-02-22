@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Monarch Studio | Monitoring Demo</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="copyright" content="All Rights Reserved - Monarch Studio"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--PRELOAD STYLE-->
+    <link href="assets/css/spectre.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-exp.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-icons.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/ionicons.min.css" rel="preload" as="style" type="text/css"/>
+    <link href='assets/css/style.min.css' rel="preload" as="style" type="text/css">
+    <!--PRELOAD SCRIPT-->
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/jQuery.min.js">
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/main.min.js">
+    <!--STYLES-->
+    <link rel="stylesheet" href="assets/css/spectre.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-icons.min.css">
+    <link rel="font" href="assets/fonts/ionicons.woff2?v=4.5.4" type="font/woff2">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href='assets/css/style.min.css'>
+    <link rel="icon" type="images/png" href="assets/favicon.png">
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
+    <!--MANIFEST-->
+    <link rel="manifest" href="assets/app.webmanifest">
+    <!--SHORTCUTICON-->
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/app-apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/app-apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/app-apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/app-apple-icon-60x60.png">
+    <link rel="shortcut icon" sizes="196x196" href="assets/icons/app-icon-196x196.png">
+    <link rel="shortcut icon" sizes="128x128" href="assets/icons/app-icon-128x128.png">
+    <!--PWA ICONS-->
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-640x1136.png"
+          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-750x1294.png"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1242x2148.png"
+          media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1125x2436.png"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <!--PWA SETTINGS-->
+    <meta name="theme-color" content="#080608">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body class="ges refresh_active">
+
+<div class="refresher loading show-md"></div>
+
+<div id="__m-mobile-header">
+    <div class="d-flex space-between flex-align">
+        <div><button id="__m-mobile-menu-trigger" type="button" data-target="#__m-navigation"><i class="icons ion-ios-menu"></i></button></div>
+        <div><img src="assets/demo/img/logo-mobile-monarch.png" alt="Logo Mobile" class="logo-mini"></div>
+        <div id="menu-empty"></div>
+    </div>
+</div>
+<div id="__m-mobile-overlay" style="display: none;" data-target="#__m-navigation"></div>
+
+<div id="__m-navigation">
+
+    <img src="assets/demo/img/logo-creative-monarch-studio.svg" alt="App Logo" class="__m-logo">
+
+    <div class="d-flex flex-column space-between" style="height: 90%;">
+        <nav>
+            <ul class="list-unstyled">
+                <li><a href="index.html" class="d-flex flex-align text-medium active mb-2"><i class="icons ion-ios-home"></i> Dashboard</a></li>
+                <div class="divider"></div>
+                <li><a href="typography.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-logo-tumblr"></i> Typography</a></li>
+                <li><a href="components.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-ios-apps"></i> Components</a></li>
+                <li><a href="ressources.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-ios-keypad"></i> Ressources</a></li>
+            </ul>
+        </nav>
+        <p class="text-center"><a href="/" class="text-small text-white">Back on app</a></p>
+    </div>
+
+</div>
+
+<div class="__m-container">
+    <div class="columns">
+        <div class="column col-12">
+            <div class="space-between d-flex flex-align mb-2">
+                <h1 class="text-white mb-0">Dashboard</h1>
+                <div class="__m-search-container d-flex flex-align justify-bottom">
+                    <div class="form-group mr-2 mb-0">
+                        <form method="GET" style="display: none;">
+                            <label hidden for="search">Rechercher</label>
+                            <input id="search" type="text" placeholder="Tapez votre recherche.." name="q" class="form-input">
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-default __m-search-trigger"><i class="icons ion-ios-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column col-3 col-sm-6 mb-2">
+            <div class="__m-dark-card">
+                <span class="text-uppercase text-small-xs">Data field</span>
+                <div class="d-flex flex-align-bottom mt-2">
+                    <p class="mb-0 __m-card-data">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 col-sm-6 mb-2">
+            <div class="__m-dark-card">
+                <span class="text-uppercase text-small-xs">Data field</span>
+                <div class="d-flex flex-align-bottom mt-2">
+                    <p class="mb-0 __m-card-data">30</p><span class="text-success ml-2 text-small">+10%</span>
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 col-sm-6 mb-2">
+            <div class="__m-dark-card">
+                <span class="text-uppercase text-small-xs">Data field</span>
+                <div class="d-flex flex-align-bottom mt-2">
+                    <p class="mb-0 __m-card-data">5</p><span class="text-error ml-2 text-small">-30%</span>
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 col-sm-6 mb-2">
+            <div class="__m-dark-card">
+                <span class="text-uppercase text-small-xs">Data field</span>
+                <div class="d-flex flex-align-bottom mt-2">
+                    <p class="mb-0 __m-card-data">70</p><span class="text-success ml-2 text-small">+180%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column col-7 col-lg-12">
+            <div id="linear_chart_id_for_amchart" class="__m-dark-card __m-charts"></div>
+        </div>
+        <div class="column col-5 col-lg-12">
+            <div class="columns">
+                <div class="column col-12">
+                    <div class="mb-2 p-2 d-flex space-between flex-align">
+                        <div>
+                            <span class="text-uppercase text-small-xs text-white">Metrics</span>
+                        </div>
+                        <div>
+                            <span class="text-small-xs label label-rounded label-primary">Process</span>
+                            <span class="text-small-xs label label-rounded label-success mr-2">Uptime</span>
+                            <code class="text-white">40 j</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="__m-dark-card mb-2">
+                <span class="text-uppercase text-small-xs">CPU</span>
+                <div class="columns">
+                    <div class="column col-4 col-sm-12 mb-xs-2">
+                        <p class="mb-0 __m-card-data cpuData">1%</p>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                        <div class="vertical-chart-container d-flex flex-align justify-bottom justify-start-xs">
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 30%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 90%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="__m-dark-card mb-2">
+                <span class="text-uppercase text-small-xs">Memory (2GB)</span>
+                <div class="columns">
+                    <div class="column col-4 col-sm-12 mb-xs-2">
+                        <p class="mb-0 __m-card-data memoryData">160Mb</p>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                        <div class="vertical-chart-container d-flex flex-align justify-bottom justify-start-xs">
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 30%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 90%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="__m-dark-card mb-2">
+                <span class="text-uppercase text-small-xs">Load Usage</span>
+                <div class="columns">
+                    <div class="column col-4 col-sm-12 mb-xs-2">
+                        <p class="mb-0 __m-card-data loadUsageData">2.5%</p>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                        <div class="vertical-chart-container d-flex flex-align justify-bottom justify-start-xs">
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 3%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 20%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart"></div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 30%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 10%"></div>
+                            </div>
+                            <div class="vertical-chart">
+                                <div class="negative-chart" style="height: 90%"></div>
+                            </div>
+                            <div class="vertical-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns mt-2">
+        <div class="column col-6 col-lg-12">
+            <div class="__m-dark-card mb-2">
+                <span class="text-uppercase text-small-xs">App logs</span>
+                <div class="divider"></div>
+                <div class="card-content overflow-x pt-2" data-id="{{_id}}">
+                    <div class="card-header d-flex flex-align space-between mb-1">
+                        <div class="d-flex flex-align">
+                            <span class="__m-badge_controller mr-1"><code
+                                    class="text-small-xs label label-rounded label-error">error</code></span>
+                            <span class="__m-badge_controller mr-1"><code
+                                    class="text-small-xs label label-rounded label-primary">controller</code></span>
+                            <span class="__m-badge_controller"><code class="text-small-xs label label-rounded text-dark">method</code></span>
+                        </div>
+                        <span class="text-small-xs">19/10/2020</span>
+                    </div>
+                    <p><code class="text-small">Uncaught TypeError : undefined is not a function</code></p>
+                </div>
+            </div>
+        </div>
+        <div class="column col-6 col-lg-12">
+            <div class="__m-dark-card mb-2">
+                <span class="text-uppercase text-small-xs">Api logs</span>
+                <div class="divider"></div>
+                <p class="mb-0 text-center text-small mt-2 pt-2">Everything is OK 👌</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/amcharts4/core.js"></script>
+<script type="text/javascript" src="assets/js/amcharts4/charts.js"></script>
+<script type="text/javascript" src="assets/js/amcharts4/themes/dark.js"></script>
+<script type="text/javascript" src="assets/js/amcharts4/themes/animated.js"></script>
+<script type="text/javascript" src="assets/js/amcharts4/lang/fr_FR.js"></script>
+<script type="text/javascript" src="assets/js/config.js"></script>
+<script type="text/javascript" src="assets/js/main.min.js"></script>
+
+<script type="text/javascript" src="assets/demo/js/chart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Monarch Studio | Monitoring Demo</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="copyright" content="All Rights Reserved - Monarch Studio"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--PRELOAD STYLE-->
+    <link href="assets/css/spectre.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-exp.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-icons.min.css" rel="preload" as="style" type="text/css">
+    <link href='assets/css/style.min.css' rel="preload" as="style" type="text/css">
+    <link href="assets/css/ionicons.min.css" rel="preload" as="style" type="text/css"/>
+    <!--PRELOAD SCRIPT-->
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/jQuery.min.js">
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/main.min.js">
+    <!--STYLES-->
+    <link rel="stylesheet" href="assets/css/spectre.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-icons.min.css">
+    <link rel="stylesheet" href='assets/css/style.min.css'>
+    <link rel="font" href="assets/fonts/ionicons.woff2?v=4.5.4" type="font/woff2">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" type="text/css"/>
+    <link rel="icon" type="images/png" href="assets/favicon.png">
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
+    <!--MANIFEST-->
+    <link rel="manifest" href="assets/app.webmanifest">
+    <!--SHORTCUTICON-->
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/app-apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/app-apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/app-apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/app-apple-icon-60x60.png">
+    <link rel="shortcut icon" sizes="196x196" href="assets/icons/app-icon-196x196.png">
+    <link rel="shortcut icon" sizes="128x128" href="assets/icons/app-icon-128x128.png">
+    <!--PWA ICONS-->
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-640x1136.png"
+          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-750x1294.png"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1242x2148.png"
+          media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1125x2436.png"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <!--PWA SETTINGS-->
+    <meta name="theme-color" content="#080608">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body class="ges refresh_active">
+
+<div class="refresher loading show-md"></div>
+
+<div id="__m-mobile-header">
+    <div class="d-flex space-between flex-align">
+        <div><button id="__m-mobile-menu-trigger" type="button" data-target="#__m-navigation"><i class="icons ion-ios-menu"></i></button></div>
+        <div><img src="assets/demo/img/logo-mobile-monarch.png" alt="Logo Mobile" class="logo-mini"></div>
+        <div id="menu-empty"></div>
+    </div>
+</div>
+<div id="__m-mobile-overlay" style="display: none;" data-target="#__m-navigation"></div>
+
+<div id="__m-navigation">
+
+    <img src="assets/demo/img/logo-creative-monarch-studio.svg" alt="App Logo" class="__m-logo">
+
+    <div class="d-flex flex-column space-between" style="height: 90%;">
+        <nav>
+            <ul class="list-unstyled">
+                <li><a href="index.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-ios-home"></i> Dashboard</a></li>
+                <div class="divider"></div>
+                <li><a href="typography.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-logo-tumblr"></i> Typography</a></li>
+                <li><a href="components.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-ios-apps"></i> Components</a></li>
+                <li><a href="ressources.html" class="d-flex flex-align text-medium mb-2 active"><i class="icons ion-ios-keypad"></i> Ressources</a></li>
+            </ul>
+        </nav>
+        <p class="text-center"><a href="/" class="text-small text-white">Back on app</a></p>
+    </div>
+
+</div>
+
+<div class="__m-container">
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h1 class="text-white">Ressources</h1>
+        </div>
+    </div>
+    <!--RESSOURCES-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <div class="__m-dark-card text-center">
+                <p class="mb-2"><img src="assets/demo/img/logo-creative-monarch-studio.svg" style="max-width: 300px"></p>
+                <p>Thanks for using .creative template !</p>
+                <p class="text-small">This template uses some external ressources. (JavaScript, charts, icons...)<br>Here the list to all ressources and documentations.</p>
+                <div class="divider"></div>
+                <div class="columns">
+                    <div class="column col-3 col-md-12">
+                        <h3>Spectre.css</h3>
+                        <p class="text-small">Beautiful CSS framework</p>
+                        <p class="mb-2"><a href="https://picturepan2.github.io/spectre/" class="btn btn-default text-small">Website</a></p>
+                    </div>
+                    <div class="column col-3 col-md-12">
+                        <h3>Ionicons v4</h3>
+                        <p class="text-small">Ionicons is a wonderful icon set.</p>
+                        <p class="mb-2"><a href="https://ionicons.com/v4/" class="btn btn-default text-small">Website</a></p>
+                    </div>
+                    <div class="column col-3 col-md-12">
+                        <h3>amChart v4</h3>
+                        <p class="text-small">To build beautiful charts !</p>
+                        <p class="mb-2"><a href="https://www.amcharts.com/" class="btn btn-default text-small">Website</a></p>
+                    </div>
+                    <div class="column col-3 col-md-12">
+                        <h3>jQuery</h3>
+                        <p class="text-small">Powerful JS Framework</p>
+                        <p class="mb-2"><a href="https://jquery.com/" class="btn btn-default text-small">Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CONFIGURATION-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h1 class="text-white">Configuration</h1>
+        </div>
+    </div>
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <div class="__m-dark-card">
+                <p>This template has some configuration that you can activate, or not, in the <code>config.js</code> file in "path_to/assets/js".</p>
+                <p>Possibilities :</p>
+                <ul>
+                    <li>PWA (Progressive Web App)</li>
+                    <li>Browser notifications</li>
+                    <li>Mobile pull refresh</li>
+                </ul>
+                <p class="text-warning mb-0">! Don't forget to load <code>config.js</code> in your html page !</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/config.js"></script>
+<script type="text/javascript" src="assets/js/main.min.js"></script>
+
+</body>
+</html>

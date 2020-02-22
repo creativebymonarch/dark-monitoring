@@ -1,0 +1,33 @@
+{
+  "short_name": "monarch", //Your short app name
+  "name": "monarch studio", //Your app name
+  "description": "Creative studio & development application company", //Your app description
+  "theme_color": "#080608", //Don't touch
+  "background_color": "#080608", //Don't touch
+  "display": "standalone", //Don't touch
+  "Scope": "/", //Don't touch
+  "orientation": "portrait", //Don't touch
+  "icons": [
+    {
+      "src": "/assets/icons/app-icon-48x48.png", //App icon : edit in folder
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/assets/icons/app-icon-96x96.png", //App icon : edit in folder
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/assets/icons/app-icon-192x192.png", //App icon : edit in folder
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/splash/launch-512x512.png", //App launch : edit in folder
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/" //Don't touch
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Monarch Studio | Monitoring Demo</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="copyright" content="All Rights Reserved - Monarch Studio"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--PRELOAD STYLE-->
+    <link href="assets/css/spectre.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-exp.min.css" rel="preload" as="style" type="text/css">
+    <link href="assets/css/spectre-icons.min.css" rel="preload" as="style" type="text/css">
+    <link href='assets/css/style.min.css' rel="preload" as="style" type="text/css">
+    <link href="assets/css/ionicons.min.css" rel="preload" as="style" type="text/css"/>
+    <!--PRELOAD SCRIPT-->
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/jQuery.min.js">
+    <link rel="preload" as="script" type="text/javascript" href="assets/js/main.min.js">
+    <!--STYLES-->
+    <link rel="stylesheet" href="assets/css/spectre.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="assets/css/spectre-icons.min.css">
+    <link rel="stylesheet" href='assets/css/style.min.css'>
+    <link rel="font" href="assets/fonts/ionicons.woff2?v=4.5.4" type="font/woff2">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" type="text/css"/>
+    <link rel="icon" type="images/png" href="assets/favicon.png">
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
+    <!--MANIFEST-->
+    <link rel="manifest" href="assets/app.webmanifest">
+    <!--SHORTCUTICON-->
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/app-apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/app-apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/app-apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/app-apple-icon-60x60.png">
+    <link rel="shortcut icon" sizes="196x196" href="assets/icons/app-icon-196x196.png">
+    <link rel="shortcut icon" sizes="128x128" href="assets/icons/app-icon-128x128.png">
+    <!--PWA ICONS-->
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-640x1136.png"
+          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-750x1294.png"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1242x2148.png"
+          media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splash/launch-1125x2436.png"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <!--PWA SETTINGS-->
+    <meta name="theme-color" content="#080608">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body class="ges refresh_active">
+
+<div class="refresher loading show-md"></div>
+
+<div id="__m-mobile-header">
+    <div class="d-flex space-between flex-align">
+        <div>
+            <button id="__m-mobile-menu-trigger" type="button" data-target="#__m-navigation"><i
+                    class="icons ion-ios-menu"></i></button>
+        </div>
+        <div><img src="assets/demo/img/logo-mobile-monarch.png" alt="Logo Mobile" class="logo-mini"></div>
+        <div id="menu-empty"></div>
+    </div>
+</div>
+<div id="__m-mobile-overlay" style="display: none;" data-target="#__m-navigation"></div>
+
+<div id="__m-navigation">
+
+    <img src="assets/demo/img/logo-creative-monarch-studio.svg" alt="App Logo" class="__m-logo">
+
+    <div class="d-flex flex-column space-between" style="height: 90%;">
+        <nav>
+            <ul class="list-unstyled">
+                <li><a href="index.html" class="d-flex flex-align text-medium mb-2"><i class="icons ion-ios-home"></i>
+                    Dashboard</a></li>
+                <div class="divider"></div>
+                <li><a href="typography.html" class="d-flex flex-align text-medium mb-2"><i
+                        class="icons ion-logo-tumblr"></i> Typography</a></li>
+                <li><a href="components.html" class="d-flex flex-align text-medium mb-2 active"><i
+                        class="icons ion-ios-apps"></i> Components</a></li>
+                <li><a href="ressources.html" class="d-flex flex-align text-medium mb-2"><i
+                        class="icons ion-ios-keypad"></i> Ressources</a></li>
+            </ul>
+        </nav>
+        <p class="text-center"><a href="/" class="text-small text-white">Back on app</a></p>
+    </div>
+
+</div>
+
+<div class="__m-container">
+    <!--SPECTRE-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h1 class="text-white">Components</h1>
+        </div>
+    </div>
+    <!--SPECTRE-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <div class="p-2 bg-secondary card mb-2">
+                <p class="mb-0"><img src="assets/demo/img/spectre-logo.svg"></p>
+                <h2>Spectre.css</h2>
+                <p class="mb-2">This template uses <a href="https://picturepan2.github.io/spectre/getting-started.html">Spectre.css</a>
+                    as framework. Please visit the website to see original components and main class.</p>
+            </div>
+        </div>
+    </div>
+    <!--TABLES-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h2 class="text-white">Tables</h2>
+            <p class="text-white mb-2">Add <code>.td-width</code> or <code>.td-width-xl</code> to <code>td</code> tag
+                for responsive too long contents.</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card table-container">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Column1</th>
+                        <th>Column2</th>
+                        <th>Column3</th>
+                        <th>Column4</th>
+                        <th>Column5</th>
+                        <th>Column6</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Data1</td>
+                        <td>Data2</td>
+                        <td class="td-width">Data3</td>
+                        <td class="td-width-xl">Data4</td>
+                        <td>Data5</td>
+                        <td>Data6</td>
+                    </tr>
+                    <tr>
+                        <td>Data1</td>
+                        <td>Data2</td>
+                        <td>Data3</td>
+                        <td>Data4</td>
+                        <td>Data5</td>
+                        <td>Data6</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--TOAST-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h2 class="text-white">Toasts</h2>
+            <p class="text-white mb-2">Create toast with <code>createToast(message, class)</code> JS function.</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card table-container">
+                <div class="columns flex-align">
+                    <div class="column col-6">
+                        <div class="toast" style="opacity: 1">Default toast</div>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0"><code>No class (default)</code></p>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0 text-right">
+                            <button type="button" onclick="createToast('Default', '')"
+                                    class="btn btn-default text-small">Create Toast
+                            </button>
+                        </p>
+                    </div>
+
+                    <div class="column col-6">
+                        <div class="toast toast-primary" style="opacity: 1">Primary toast</div>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0"><code>.toast-primary</code></p>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0 text-right">
+                            <button type="button" onclick="createToast('Primary', 'toast-primary')"
+                                    class="btn btn-default text-small">Create Toast
+                            </button>
+                        </p>
+                    </div>
+
+                    <div class="column col-6">
+                        <div class="toast toast-success" style="opacity: 1">Success toast</div>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0"><code>.toast-success</code></p>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0 text-right">
+                            <button type="button" onclick="createToast('Succes', 'toast-success')"
+                                    class="btn btn-default text-small">Create Toast
+                            </button>
+                        </p>
+                    </div>
+
+
+                    <div class="column col-6">
+                        <div class="toast toast-warning" style="opacity: 1">Warning toast</div>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0"><code>.toast-warning</code></p>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0 text-right">
+                            <button type="button" onclick="createToast('Warning', 'toast-warning')"
+                                    class="btn btn-default text-small">Create Toast
+                            </button>
+                        </p>
+                    </div>
+
+
+                    <div class="column col-6">
+                        <div class="toast toast-error" style="opacity: 1">Error toast</div>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0"><code>.toast-error</code></p>
+                    </div>
+                    <div class="column col-3">
+                        <p class="mb-0 text-right">
+                            <button type="button" onclick="createToast('Error', 'toast-error')"
+                                    class="btn btn-default text-small">Create Toast
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DROPDOWN-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h2 class="text-white">Dropdown</h2>
+            <p class="text-white mb-2">Simply use dropdown menu with cool bounce effect. (Structure from
+                Spectre.css)</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card table-container">
+                <div class="columns flex-align">
+                    <div class="column col-2 col-md-12 mb-2">
+                        <div class="dropdown">
+                            <a href="#" class="btn btn-primary text-small dropdown-toggle" tabindex="0">Actions from
+                                left</a>
+                            <ul class="menu mt-0">
+                                <li><a href="#" class="text-decoration-none text-small">Add some actions</a></li>
+                                <li><a href="#" class="text-decoration-none text-small text-error">Add some actions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-8 col-md-12">
+                        <p class="mb-0">The menu come from the left of the button.</p>
+                    </div>
+                </div>
+                <div class="columns flex-align">
+                    <div class="column col-2 col-md-12">
+                        <div class="dropdown dropdown-right">
+                            <a href="#" class="btn btn-primary text-small dropdown-toggle" tabindex="0">Actions from
+                                right</a>
+                            <ul class="menu mt-0">
+                                <li><a href="#" class="text-decoration-none text-small">Add some actions</a></li>
+                                <li><a href="#" class="text-decoration-none text-small text-error">Add some actions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-8 col-md-12">
+                        <p class="mb-0">The menu come from the right of the button. Add <code>.dropdown-right</code> to
+                            the main <code>.dropdown</code> class.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--BUTTONS-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h2 class="text-white">Buttons</h2>
+            <p class="text-white mb-2">From Spectre original buttons.</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card table-container">
+                <div class="columns">
+                    <div class="column col-4 col-md-12 mb-2">
+                        <p class="mb-0"><code>.btn</code></p>
+                        <button type="button" class="btn">Button</button>
+                    </div>
+                    <div class="column col-4 col-md-12 mb-2">
+                        <p class="mb-0"><code>.btn .btn-default</code></p>
+                        <button type="button" class="btn btn-default">Button default</button>
+                    </div>
+                    <div class="column col-4 col-md-12 mb-2">
+                        <p class="mb-0"><code>.btn .btn-primary</code></p>
+                        <button type="button" class="btn btn-primary">Button primary</button>
+                    </div>
+                    <div class="column col-4 col-md-12">
+                        <p class="mb-0"><code>.btn</code></p>
+                        <button type="button" class="btn btn text-small">Button default XS</button>
+                    </div>
+                    <div class="column col-4 col-md-12">
+                        <p class="mb-0"><code>.btn .btn-primary .text-small</code></p>
+                        <button type="button" class="btn btn-default text-small">Button default XS</button>
+                    </div>
+                    <div class="column col-4 col-md-12">
+                        <p class="mb-0"><code>.btn .btn-primary .text-small</code></p>
+                        <button type="button" class="btn btn-primary text-small">Button primary XS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TABS-->
+    <div class="columns mb-2">
+        <div class="column col-12">
+            <h2 class="text-white">Tabs</h2>
+            <p class="text-white mb-2">From Spectre original tabs.</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card">
+                <ul class="tab __m-tab-navigation">
+                    <li class="tab-item">
+                        <a href="#" class="active text-uppercase" data-target="#tab-container-1">
+                            Tab 1
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a href="#" class="text-uppercase" data-target="#tab-container-2">
+                            Tab 2
+                        </a>
+                    </li>
+                </ul>
+                <div id="tab-container-1" class="__m-tab-container columns mt-2">
+                    <p>Content of the first tab</p>
+                </div>
+                <div id="tab-container-2" class="__m-tab-container columns mt-2" style="display: none;">
+                    <p>Content of the second tab</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODALS & SEARCH-->
+    <div class="columns mb-2">
+        <div class="column col-6 col-md-12">
+            <h2 class="text-white">Modals</h2>
+            <p class="text-white mb-2">From Spectre original modals.</p>
+            <div class="__m-dark-card table-container">
+                <p class="text-small">Open modal with attribute <code>data-target="#YOURTARGET"</code> and class <code>.modal-trigger</code>
+                    to target your modal.</p>
+                <a href="#" class="text-decoration-none text-small modal-trigger btn btn-primary"
+                   data-target="#creative-modal-demo">Open modal</a>
+            </div>
+        </div>
+        <div class="column col-6 col-md-12">
+            <h2 class="text-white">Search</h2>
+            <p class="text-white mb-2">Input animation</p>
+            <div class="__m-dark-card table-container">
+                <p class="text-small">Animation with search icons.</p>
+                <div class="__m-search-container d-flex flex-align justify-bottom">
+                    <div class="form-group mr-2 mb-0">
+                        <form method="GET" style="display: none;">
+                            <label hidden for="search">Rechercher</label>
+                            <input id="search" type="text" placeholder="Tapez votre recherche.." name="q"
+                                   class="form-input">
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-default __m-search-trigger"><i
+                            class="icons ion-ios-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--LABELS-->
+    <div class="columns">
+        <div class="column col-12">
+            <h2 class="text-white">Labels</h2>
+            <p class="text-white mb-2">From Spectre original label.</p>
+        </div>
+        <div class="column col-12">
+            <div class="__m-dark-card table-container">
+                <div class="columns">
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>.label .label-primary</code></p>
+                        <span class="label label-primary">Label secondary</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>.label .label-success</code></p>
+                        <span class="label label-success">Label Success</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>.label .label-error</code></p>
+                        <span class="label label-error">Label Error</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>.label .label-warning</code></p>
+                        <span class="label label-warning">Label Warning</span>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .label-rounded</code></p>
+                        <span class="label label-primary label-rounded">Label secondary</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .label-rounded</code></p>
+                        <span class="label label-success">Label Success</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .label-rounded</code></p>
+                        <span class="label label-error">Label Error</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .label-rounded</code></p>
+                        <span class="label label-warning">Label Warning</span>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .text-small</code></p>
+                        <span class="label label-primary label-rounded text-small">Label secondary</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .text-small</code></p>
+                        <span class="label label-success label-rounded text-small">Label Success</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .text-small</code></p>
+                        <span class="label label-error label-rounded text-small">Label Error</span>
+                    </div>
+                    <div class="column col-3 col-md-12 mb-2">
+                        <p class="mb-0"><code>... + .text-small</code></p>
+                        <span class="label label-warning label-rounded text-small">Label Warning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="__m-toast_container"></div>
+
+<div id="creative-modal-demo" class="modal modal-md">
+    <a href="#close" class="modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+            <div class="modal-title h6">Modal Title</div>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p>Modal content</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary text-small">Button</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/config.js"></script>
+<script type="text/javascript" src="assets/js/main.min.js"></script>
+
+</body>
+</html>
