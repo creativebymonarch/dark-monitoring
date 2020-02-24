@@ -14,7 +14,7 @@ $(document).ready(function () {
         // Use the window load event to keep the page load performant
         window.addEventListener('load', function(){
             // Register the service worker here
-            navigator.serviceWorker.register(ROOT + '/path_to_sw_file/sw.js');
+            navigator.serviceWorker.register(DOMAIN + PUBLIC + '/sw.js');
         });
     }
 
