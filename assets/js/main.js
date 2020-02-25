@@ -143,7 +143,7 @@ function getRandomInt(max) {
 
 function createNotification(text, title, url){
 
-    var icon = DOMAIN + "/assets/splash/launch-512x512.png";
+    var icon = DOMAIN + PUBLIC + "/splash/launch-512x512.png";
 
     var options = {
         icon: icon,
